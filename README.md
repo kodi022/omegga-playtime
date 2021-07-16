@@ -1,2 +1,3 @@
-# omegga-text-command-generator
-Create text/info commands in Brickadia without leaving your server using omegga with this plugin! The doc.json and webui contains all the info you need to use this and make your own.
+# omegga-playtime
+This is a Omegga plugin that lets you know how long you've played on a server, and the first time you've joined it after this plugin is installed!
+View initial join and total playtime for yourself or others.
