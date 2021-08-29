@@ -147,7 +147,7 @@ class kPlaytime {
         }); 
     }
   
-    // omegga.webserver.database.getPlayer(id)
+    // omegga.webserver.database.getPlayer(id) yre
     async stop() {  
     }
 }
