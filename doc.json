@@ -12,20 +12,20 @@
   "commands": [
   {
     "name": "!playtime",
-    "description": "See your or others total playtime",
-      "example": "!playtime cake",
+    "description": "See your or others total playtime. If the name has a space, replace it with a _",
+      "example": "!playtime bob_haroldson",
       "args": [{"name": "name", "description": "Someone elses name", "required": false}]
   },
   {
     "name": "!firstjoin",
-    "description": "See when you or others first joined the server",
+    "description": "See when you or others first joined the server. If the name has a space, replace it with a _",
       "example": "!firstjoin cake",
       "args": [{"name": "name", "description": "Someone elses name", "required": false}]
   },
   {
     "name": "!plytime:clearstore",
     "description": "Clears store, which is all saved times. Do not do unless required. Requires Authorization.",
-      "example": "!plytime:clearstore confirm cake",
+      "example": "!plytime:clearstore confirm knightsphere",
       "args": [{"name": "confirm", "description": "Confirm the clearing", "required": true},
         {"name": "name", "description": "Clear a specific persons store", "required": false}]
   }

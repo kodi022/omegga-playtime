@@ -3,3 +3,6 @@ This is a Omegga plugin that lets you know how long you've played on a server, a
 View initial join and total playtime for yourself or others.
 
 Do '!help K-Playtime' in-game to view what you can access
+
+Search for other players by writing their name, but replacing spaces with _
+example: !playtime bob_haroldson

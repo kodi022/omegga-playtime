@@ -49,6 +49,7 @@ class kPlaytime {
 
             }
         });
+        
         this.omegga.on("leave", async (player) => {
 
             let name = (player.name).toLowerCase().replace(" ", "_");
@@ -65,6 +66,7 @@ class kPlaytime {
             } else {          
             }
         });
+
         this.omegga.on("chatcmd:playtime", async (name, ...args) => {
             let othername = args.join(" ").toLowerCase().replace(" ","_");
             let name2 = name.toLowerCase().replace(" ", "_");
@@ -93,6 +95,7 @@ class kPlaytime {
                 this.omegga.whisper(name, `<color="aaa">You have played on this server for <color="c85"><b>${prettyMilliseconds(players.totaltime + date)}</></></>`)
             }
         });
+
         this.omegga.on("chatcmd:firstjoin", async (name, ...args) => {
             let othername = args.join(" ").toLowerCase().replace(" ","_");
             let name2 = name.toLowerCase().replace(" ", "_");
@@ -112,7 +115,7 @@ class kPlaytime {
                 this.omegga.whisper(name, `<color="aaa">You first joined <color="c85"><b>${prettyMilliseconds(date)}</></> ago, or on <color="c85"><b>${date2}</></></>`);
             }
         });
-        this.omegga.on("chatcmd:leaderboards", async (name) => {
+        this.omegga.on("chatcmd:leaderboards", async (name) => { //unfinished
             console.log("test");
             for (let i = 0; i >= this.store.count; i++) {
                 console.log(this.store);
@@ -131,7 +134,7 @@ class kPlaytime {
                         this.omegga.whisper(name, '<color="f33">Playertimes cleared.</>');
                     }
                 } else {
-                    this.omegga.whisper(name, `<color="aaa">Type <b><color="f99">'!plytime:clearstore confirm (name)'</></> to confirm this action.</>`);
+                    this.omegga.whisper(name, `<color="aaa">Type <b><color="f99">'!plytime:clearstore confirm (optional name)'</></> to confirm this action.</>`);
                 };
             } else {
                 this.omegga.whisper(name, '<color="f99">You are not authorized.</>');
@@ -147,7 +150,7 @@ class kPlaytime {
         }); 
     }
   
-    // omegga.webserver.database.getPlayer(id) yre
+    // omegga.webserver.database.getPlayer(id)
     async stop() {  
     }
 }
