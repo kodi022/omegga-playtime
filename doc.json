@@ -11,20 +11,26 @@
   },
   "commands": [
   {
-    "name": "!playtime",
-    "description": "See your or others total playtime. If the name has a space, replace it with a _",
-      "example": "!playtime bob_haroldson",
+    "name": "/playtime",
+    "description": "See your or others total playtime. (if player has old store entry this won't work until they rejoin)",
+      "example": "!playtime bob haroldson",
       "args": [{"name": "name", "description": "Someone elses name", "required": false}]
   },
   {
-    "name": "!firstjoin",
-    "description": "See when you or others first joined the server. If the name has a space, replace it with a _",
+    "name": "/firstjoin",
+    "description": "See when you or others first joined the server. (if player has old store entry this won't work until they rejoin)",
       "example": "!firstjoin cake",
       "args": [{"name": "name", "description": "Someone elses name", "required": false}]
   },
   {
-    "name": "!plytime:clearstore",
-    "description": "Clears store, which is all saved times. Do not do unless required. Requires Authorization.",
+    "name": "/leaderboard",
+    "description": "See the top playtime people of the server, up to 10.",
+      "example": "/leaderboard",
+      "args": []
+  },
+  {
+    "name": "/plytime:clearstore",
+    "description": "Clears store, which is all saved times. Do not do unless required. Requires Authorization. (may not work with using a name)",
       "example": "!plytime:clearstore confirm knightsphere",
       "args": [{"name": "confirm", "description": "Confirm the clearing", "required": true},
         {"name": "name", "description": "Clear a specific persons store", "required": false}]
