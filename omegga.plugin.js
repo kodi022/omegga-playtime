@@ -24,7 +24,13 @@ class kPlaytime {
 
                 let date = Date.now();
                 players.lastJoin = date;
-                this.omegga.broadcast(`<color="aaa"><b><color="5a7">${player.name}</></> last joined <color="c85"><b>${prettyMilliseconds(players.lastJoin - players.lastLeave)}</></> ago</>`);
+
+                if (player.lastLeave != 0) {
+                    this.omegga.broadcast(`<color="aaa"><b><color="5a7">${player.name}</></> last joined <color="c85"><b>${prettyMilliseconds(players.lastJoin - players.lastLeave)}</></> ago</>`);
+                } else {
+                    this.omegga.broadcast(`<color="aaa">No Last leave tracked</>`);
+                }
+                
                 await this.store.set("playertime:" + name, players);
 
             } else if (players == undefined && players2 != undefined) {
@@ -195,6 +201,7 @@ class kPlaytime {
                 this.omegga.whisper(name, '<color="f99">You are not authorized.</>');
             }
         }); 
+
         this.omegga.on("chatcmd:plytime:test", async (name, othername) => {
 
             if (othername != undefined) {
@@ -203,6 +210,7 @@ class kPlaytime {
                 console.log(await this.store.get("playertime:" + name));
             }
         }); 
+
         this.omegga.on("cmd:omeggaplaytime", async (name, ...args) => { //UNFINISHED
             let people = this.omegga.getPlayers();
             let name2 = name.toLowerCase().replace(/ /gi,"_");
