@@ -3,9 +3,12 @@ This is a Omegga plugin that lets you know how long you've played on a server, a
 View initial join and total playtime for yourself or others.
 
 install using this command or downloading and putting in plugins folder
+
 omegga install gh:kodi022/playtime
 
+
 Do '!help K-Playtime' in-game to view what you can access
+
 
 Known bugs:
 
